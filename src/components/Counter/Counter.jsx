@@ -2,12 +2,8 @@ import {React, useState} from 'react';
 
 const Counter = ({product, onAdd}) => {
     const [cantidad, setcantidad] = useState(1);
-    const AgregarCarrito = (product) =>{
-        const productoCarrito = {id: product.id, cantidad: cantidad}
-        console.log(productoCarrito);
-    }
     const cantidadProducto = (operacion) =>{
-        if(operacion == "+"){
+        if(operacion === "+"){
             if(cantidad < product.stock){
                 setcantidad(cantidad + 1)
             }
@@ -19,7 +15,7 @@ const Counter = ({product, onAdd}) => {
     }
     return (
         <>
-            <button className='btn btn-primary' onClick={() => onAdd()}>Agregar al Carrito</button>
+            <button className='btn btn-primary' onClick={() => onAdd(product, cantidad)}>Agregar al Carrito</button>
             <button className='btn btn-dark m-3' onClick={() => cantidadProducto("+")}> 
                 +
             </button>

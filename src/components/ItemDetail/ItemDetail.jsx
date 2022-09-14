@@ -1,11 +1,15 @@
-import {React, useState} from 'react';
+import {React, useState, useContext} from 'react';
 import Counter from '../Counter/Counter';
 import "./ItemDetail.css"
 import {Link} from 'react-router-dom'
+import { CartContext} from '../../context/CartContext';
 const ItemDetail = ({product}) => {
     const [mostrar, setmostrar] = useState(true);
-    const onAdd = ()=>{
+    const {addCart} = useContext(CartContext)
+    const onAdd = (cantidad)=>{
+        console.log(cantidad);
         setmostrar(false)
+        addCart(product, cantidad)
     }
     let printmostrar
     if (mostrar) {
@@ -18,7 +22,7 @@ const ItemDetail = ({product}) => {
             <div className="card mb-3">
             <div className="row g-0">
             <div className="col-md-4">
-            <img src={`./assets/img/${product.img}`}  className="img-fluid rounded-start" alt="..." />
+            <img src={`/assets/img/${product.img}`}  className="img-fluid rounded-start" alt="..." />
             </div>
             <div className="col-md-8">
             <div className="card-body">
