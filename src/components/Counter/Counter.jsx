@@ -26,5 +26,4 @@ const Counter = ({product, onAdd}) => {
         </>
     );
 }
-
 export default Counter;

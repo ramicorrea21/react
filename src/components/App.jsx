@@ -4,12 +4,12 @@ import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
 import NavBar from './NavBar/NavBar';
 import Cart from './Cart/Cart';
-import CartContextProvider from '../context/CartContext';
+import CartContext from '../context/CartContext';
 
 
 const App = () => {
   return (
-    <CartContextProvider>
+    <CartContext.CartContextProvider>
     <BrowserRouter>
     <>
     <NavBar/>
@@ -23,7 +23,7 @@ const App = () => {
     </Routes>
     </> 
     </BrowserRouter>
-    </CartContextProvider>
+    </CartContext.CartContextProvider>
   );
 }
 
