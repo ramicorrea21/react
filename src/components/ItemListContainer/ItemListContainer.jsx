@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import "./ItemListContainer.css"
 
 const productos = [
     {nombre:"Seleccion Argentina Qatar 2022" ,stock: "10", precio:"10000", id:1, img:"arg.jpg", texto:"Nueva Camiseta de la Seleccion Argentina Qatar 2022 Messi", categoria:"Seleccion"},
@@ -43,7 +44,7 @@ const ItemListContainer = () => {
         }, [categoria]);
                         
     return (
-        <div className='container'><ItemList list ={productos}/></div>
+        <div className='container text-center contProd'><ItemList list ={productos}/></div>
     );
 }
 export default ItemListContainer;

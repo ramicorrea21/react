@@ -5,11 +5,11 @@ import ItemListContainer from './ItemListContainer/ItemListContainer';
 import NavBar from './NavBar/NavBar';
 import Cart from './Cart/Cart';
 import CartContext from '../context/CartContext';
-
+import CartProvider from '../context/CartContext';
 
 const App = () => {
   return (
-    <CartContext.CartContextProvider>
+    <CartProvider>
     <BrowserRouter>
     <>
     <NavBar/>
@@ -23,7 +23,7 @@ const App = () => {
     </Routes>
     </> 
     </BrowserRouter>
-    </CartContext.CartContextProvider>
+    </CartProvider>
   );
 }
 

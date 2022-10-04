@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom'
 const productosDetail = [
-    {nombre:"Seleccion Argentina Qatar 2022" ,stock: "10", precio:"10000", id:1, img:"arg.jpg", texto:"Nueva Camiseta de la Seleccion Argentina Qatar 2022 Messi,", categoria:"Seleccion"},
+    {nombre:"Seleccion Argentina Qatar 2022" ,stock: "10", precio:"10000", id:1, img:"arg.jpg", texto:"Nueva Camiseta de la Seleccion Argentina Qatar 2022 Messi", categoria:"Seleccion"},
     {nombre:"Seleccion Brasilera Qatar 2022", stock: "12", precio:"9500", id:2, img:"brasil.jpg", texto:"Nueva Camiseta de la Seleccion Brasilera Qatar 2022 Neymar", categoria:"Seleccion"},
     {nombre:"Seleccion Uruguaya Qatar 2022", stock: "9", precio:"11500", id:3, img:"uru.jpg", texto:"Nueva Camiseta de la Seleccion Uruguaya Qatar 2022 Suarez", categoria:"Seleccion"},
     {nombre:"Seleccion Alemana Qatar 2022", stock: "15", precio:"9000", id:4, img:"alemania.jpg", texto:"Nueva Camiseta de la Seleccion Alemana Qatar 2022 Havertz", categoria:"Seleccion"},

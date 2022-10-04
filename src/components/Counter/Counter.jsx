@@ -2,6 +2,7 @@ import {React, useState} from 'react';
 
 const Counter = ({product, onAdd}) => {
     const [cantidad, setcantidad] = useState(1);
+
     const cantidadProducto = (operacion) =>{
         if(operacion === "+"){
             if(cantidad < product.stock){

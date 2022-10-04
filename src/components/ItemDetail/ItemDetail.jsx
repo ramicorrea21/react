@@ -5,18 +5,24 @@ import {Link} from 'react-router-dom'
 import { CartContext} from '../../context/CartContext';
 const ItemDetail = ({product}) => {
     const [mostrar, setmostrar] = useState(true);
-    const {addCart} = useContext(CartContext)
-    const onAdd = (cantidad)=>{
-        console.log(cantidad);
+    const {addItem} = useContext(CartContext)
+
+    const onAdd = (product, cantidad)=>{
+        let id = product.id; let nombre = product.nombre; let precio = product.precio
+        let prodCart = {id, nombre, precio, cantidad}
         setmostrar(false)
-        addCart(product, cantidad)
+        addItem(prodCart) 
     }
+
+
     let printmostrar
     if (mostrar) {
         printmostrar = <Counter product={product} onAdd={onAdd}/>
     }else{
         printmostrar = <button className='btn btn-success'><Link to="/cart">Comprar</Link></button>
     }
+
+
     return (
         <div className='p-5'>
             <div className="card mb-3">
