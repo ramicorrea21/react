@@ -28,12 +28,6 @@ return (
             <li className="nav-item">
             <Link to='/categoria/Club' className="nav-link nav-link-active">Club</Link>
             </li>
-            <li className="nav-item">
-            <Link to="/contacto" className="nav-link nav-link-active">Contacto</Link>
-            </li>
-            <li className="nav-item">
-            <Link to="/sobrenosotros" className="nav-link nav-link-active">Sobre Nosotros</Link>
-            </li>
             </ul>
         </div>
         </div>
