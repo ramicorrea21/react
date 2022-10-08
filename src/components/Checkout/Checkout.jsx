@@ -37,7 +37,6 @@ const [idOrder, setIdOrder] = useState();
         try {
             const col = collection(db, "Orders")
             const order = await addDoc(col, data)
-            console.log('orderNro', order);
             setIdOrder(order.id)
             clear()
         } catch (error) {
